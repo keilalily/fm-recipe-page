@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: Young-Serif;
+    src: url('../assets/fonts/YoungSerif-Regular.ttf');
+}
+
+@font-face {
+    font-family: Outfit;
+    src: url('../assets/fonts/Outfit-Regular.ttf');
+}
+
+@font-face {
+    font-family: Outfit-SemiBold;
+    src: url('../assets/fonts/Outfit-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: Outfit-Bold;
+    src: url('../assets/fonts/Outfit-Bold.ttf');
+}
+
+@theme {
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 1024px;
+    --color-stone-100: hsl(30, 54%, 90%);
+    --color-stone-150: hsl(30, 18%, 87%);
+    --color-stone-600: hsl(30, 10%, 34%);
+    --color-stone-900: hsl(24, 5%, 18%);
+    --color-brown-800: hsl(14, 45%, 36%);
+    --color-rose-50: hsl(330, 100%, 98%);
+    --color-rose-800: hsl(332, 51%, 32%);
+    --font-outfit: Outfit, 'sans-serif';
+    --font-outfit-semibold: Outfit-SemiBold, 'sans-serif';
+    --font-outfit-bold: Outfit-Bold, 'sans-serif';
+    --font-young-serif: Young-Serif, 'sans-serif';
+}
+
+.bullet {
+    @apply w-1 h-1 rounded-full ml-2 shrink-0;
+}
+
+.bullet-rose {
+    @apply bg-(--color-rose-800);
+}
+
+.bullet-brown {
+    @apply bg-(--color-brown-800);
+}
+
+.number {
+    @apply text-lg font-outfit-semibold ml-2 text-(--color-brown-800);
+}
+
+.list {
+    @apply
+        flex flex-col gap-1
+        text-base font-outfit text-(--color-stone-600);
+}
+
+.list-item {
+    @apply flex items-center gap-8;
+}
+
+.list-item-start {
+    @apply flex gap-6;
+}
+
+.heading-brown {
+    @apply font-young-serif text-3xl text-(--color-brown-800);
+}
+
+.table {
+    @apply w-full
+}
+
+.sr-only {
+    @apply absolute w-px h-px overflow-hidden whitespace-nowrap border-0 p-0 -m-px;
+}
+
+.table-row {
+    @apply w-full border-b border-(--color-stone-150) last:border-none;
+}
+
+.nutrition {
+    @apply text-base py-3 pl-8 font-outfit text-(--color-stone-600);
+}
+
+.values {
+    @apply text-base py-3 pr-6 font-outfit-bold text-(--color-brown-800);
+}
+
+.has-transition {
+    @apply transition-all duration-500 ease-in-out
+}
